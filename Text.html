@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+   
+      <title>text animation</title>
+       <style>
+         :root
+         {
+            --color: #fff;
+            --bgcolor: black;
+         }
+         *{
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             background-color: var(--bgcolor);
+         }
+           h1
+              {
+                color: var(--color);
+                text-align: center;
+                line-height: 100vh;
+              }
+              span
+                 {
+            transition: all 2s ease;
+                   opacity: 0;
+           transform: translatey(40px);
+             display: inline-block;
+             font-size: 3rem;
+             
+             
+                 }
+              span.fade
+                {
+                 opacity: 1;
+    transform: translatey(0)
+                 
+                }
+         
+       </style>
+       
+      
+  </head>
+  <body>
+  
+  <h1 class="text">Coffee ☕  </h1>
+  
+  
+  <script>
+const text = document.querySelector('.text');
+const innertext = text.textContent;
+const arrof_words = innertext.split("");
+ text.textContent = "";
+ for(let i=0; i<arrof_words.length; i++)
+      {
+     text.innerHTML += "<span>" + arrof_words[i] + "</span>";
+      }
+  // animation by setting time interval
+    let char = 0;
+    let timer = setInterval(ontick=>
+     
+     {
+const span  = document.querySelectorAll('span')[char];
+    span.classList.add('fade');
+       char++
+     if(span === arrof_words.length)
+        {
+            complete();
+            return;
+        }
+     },40);
+      const complete = ()=>
+         {
+             clearInterval(timer);
+             timer = null;
+         }
+  </script>
+  </body>
+</html>

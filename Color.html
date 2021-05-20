@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+   
+      <title>color animation</title>
+       <style>
+          *
+            {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: Monospace;
+            }
+            body
+               {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                  height: clamp(100vh,100vh,100vh);
+                  
+                
+               }
+            .main
+              {
+                background-color: #fff;
+                color: black;
+              }
+           .dark {
+              background-color:black;
+              color: white;
+           }
+          button
+             {
+               border-radius: 5px;
+               padding: 10px 0;
+               background-color: rbga(0,0,0,0.22);
+          box-shadow: 2px 2px 2px grey 
+                    , 2px 2px 2px ;
+             }
+          
+         
+       </style>
+      
+  </head>
+  <body class="main">
+ <div>
+    <h1 class="color"> Good morning</h1>
+    
+    <button onclick="mode()">changes mode </button>
+     </div>
+     <script>
+const body = document.querySelector('body');
+ const mode = ()=>
+ {
+      if(body.classList.contains('main'))
+         {
+           body.classList.remove('main');
+           body.classList.add('dark');
+            d();
+         }
+      else
+        {
+     body.classList.remove('dark');
+     body.classList.add('main');
+      l();
+        }
+ }
+ // text 
+ const header = document.querySelector('h1');
+    const d =()=>
+        {
+          header.innerHTML = "GOOD NIGHT "
+        }
+      const l = ()=>
+        {
+           header.innerHTML = "GOOD MORNING "
+        }
+  
+  
+       
+     </script>
+  </body>
+</html>

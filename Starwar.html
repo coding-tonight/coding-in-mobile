@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>light saber</title>
+       <style>
+           *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+           }
+           body
+            {
+               background: black;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               height: 100vh;
+               flex-direction: column;
+            }
+            .light
+              {
+                height: 300px;
+                width: 10px;
+          background-color: black;
+                
+
+  border-radius: 5px 5px 0 0;
+              }
+        .handle
+           {
+    width: 50px;
+       height: 60px;
+     background-color: grey;
+clip-path: polygon(22% 1%, 77% 0, 65% 24%, 63% 77%, 59% 80%, 48% 80%, 37% 79%, 36% 24%);
+ position: relative;
+      }
+ .handle button
+    {
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%,-50%)
+           scale(3);
+       
+    }
+    .on
+      {
+        background-color: lightgreen;
+      filter: drop-shadow(0 0 1rem #fff);
+      height:300px;
+      width:10px;
+      }
+    
+            
+       </style>
+    </head>
+     
+      <body>
+          <div class="light">
+            
+          </div>
+          <div class="handle">
+              <button></button>
+          </div>
+          <script>
+          // javascript 
+  const light = document.querySelector('.light');
+const handle = document.querySelector('button')
+  // when click button should turn off;
+     handle.addEventListener('click',e=>
+     {
+   if(light.classList.contains('light'))
+        {
+      light.classList.remove('light');
+      light.classList.add('on')
+        }
+      else{
+         light.classList.remove('on')
+         light.classList.add('light')
+      }
+      
+     });
+  
+         
+          </script>
+      </body>
+</html>

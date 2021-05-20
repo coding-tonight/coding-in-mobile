@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+   
+      <title>Dom</title>
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            body
+               {
+        background-color: black;
+        color: #fff;    
+     font-family: Monospace,"Times New Roman";
+      display: flex;
+       align-items: center;
+       justify-content:center;
+       height: clamp(109vh,100vh,100vh);
+               }
+          span
+            {
+              transition: all 4s ease;
+               opacity: 0;
+            }
+              
+           .fade
+              {
+                 color: purple;
+                 opacity: 1;
+              }
+            
+                
+        </style>
+          
+      
+  </head>
+  <body>
+     <h1 class="text">Hello people</h1>
+     
+  
+     
+   <script>
+     const h1 = document.querySelector('.text');
+    const text = h1.textContent;
+    const arrtext = text.split("");
+     h1.textContent = "";
+    for(let i=0; i<arrtext.length; i++)
+     {
+  h1.innerHTML +="<span>"+ arrtext[i] +"</span>";
+     }
+   let char = 0;
+ let timer = setInterval(e=>
+       { 
+    const span = document.querySelectorAll('span')[char];
+       span.classList.add('fade');
+       char++;
+      time();
+       return;
+        
+       },40);
+       const time = ()=>
+          {
+              if(span === arrtext)
+               {
+            clearInterval(timer);
+             timer = null;
+               }
+          }
+   </script>
+   
+   
+  </body>
+</html>
+
+      
+ 

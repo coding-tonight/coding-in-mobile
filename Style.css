@@ -1,0 +1,35 @@
+.box
+{
+  height:300px;
+  width:250px;
+  background-color:red;
+  margin-inline-start:100px;
+  margin-inline-end:200px;
+   border:2px solid blue;
+   position:relative;
+   overflow:scroll;
+   
+}
+div.item1
+    {
+       height:100px;
+      width:100px;
+      background-color:orange;
+      position:relative;
+      left:150px;
+      top:300px;
+    }
+   .item2 {
+       height:100px;
+      width:100px;
+      background-color:gray;
+      
+      
+    }
+  div.item2:hover,div:active
+    {
+       opacity:0.7;
+    }
+     
+    
+

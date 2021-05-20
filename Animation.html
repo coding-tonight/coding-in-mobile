@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+   
+      <title>navbar</title>
+      <style>
+           body
+           {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             min-height: 100vh;
+            background-color: black; 
+             flex-direction: column;
+             
+            
+           }
+            div
+            {
+              font-family: "Segoe UI" ,Sans-Serif;
+              font-style: italic;
+              font-weight: 600;
+              font-size: 40px;
+              color: #fff;
+              
+              
+            
+            }
+             ul
+               {
+                  font-size: 40px;
+                  color: red;
+                  font-style: italic;
+                  position: relative;
+                  padding-left:2px;
+                  
+                  
+                  
+                  
+                
+               }
+        ul li::after
+               {
+        content: "";
+      color: red;
+      border-left: 2px solid red;
+      position: absolute;
+      left: 0;
+      margin: 20px;
+      
+      animation:  tying 3s steps(17) infinite;
+      
+               
+    height: 100%;
+    width:100% ;
+                 
+               }
+               ul
+                 {
+      display: inline-block;
+      position: relative;
+       top: 80px;
+       animation: swift 3s steps(3) infinite ;
+                 }
+               ul li 
+                 {
+      list-style: none;
+    
+                    
+                  
+                 }
+                 
+      /* animation*/
+      @keyframes tying 
+        {
+          100%
+            {
+              left: 100%;
+            }
+        }
+        @keyframes swift
+          {
+             100% 
+            {
+               top: 0;
+            }
+          }
+      </style>
+  </head>
+  <body>
+  
+  <div> Hello 
+    <ul class="dynamic">
+       <li>world</li>
+       <li>peoples</li>
+       <li>kusum </li>
+       
+    </ul>
+      
+      
+      
+    
+    
+  </div>
+  
+  
+  
+  
+
+       
+     
+  </body>
+</html>
